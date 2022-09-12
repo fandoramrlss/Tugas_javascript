@@ -1,0 +1,82 @@
+<script language="javascript">
+    //belajar variabel dan tipe data
+    var nama_lengkap = "Ridwan";
+    var jabatan = 'Manager';
+    var status = 'Menikah';
+   
+    document.write("<h3 align='center'>Data Gaji Pegawai</h3>");
+    document.write("<hr/>");
+    document.write("<br/>Nama Pegawai: " + nama_lengkap );
+    document.write("<br/>Jabatan: " + jabatan );
+    document.write("<br/>Status: " + status );
+    </script>
+    
+    <table align="center" border="1" cellpadding="10" cellspacing="0"
+    width="70%">
+    <thead>
+        <tr bgcolor="violet">
+            <th>Data Gaji</th>
+            <th>Keterangan</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1" align="center">Gaji Pokok</td>
+            <td align="center">Rp.15.000.000</td>
+        </tr>
+        <tr>
+            <td rowspan="1" align="center">Tunjangan_jabatan</td>
+            <td align="center">Rp.2.250.000</td>
+        </tr>
+        <tr>
+            <td rowspan="1" align="center">Tunjangan_keluarga</td>
+            <td align="center">Rp.2.000.000</td>
+        </tr>
+        <tr>
+            <td rowspan="1" align="center">Bpjs</td>
+            <td align="center">Rp.1.500.000</td>
+        </tr>   
+    </tbody>
+    <tfoot>
+        <tr bgcolor="pink">
+            <th colspan="1">Total Gaji</th>
+        </tr>
+    </tfoot>
+        <script language="javascript">
+            //belajar variabel dan tipe data
+            var pegawai = "Ridwan";
+            var pekerjaan = "Manager";
+            // Manager => 15 jt, Asisten Manager => 10 jt, Staff => 5 jt
+            //struktur kendali
+            if(pekerjaan == 'Manager'){
+                 = 15000000; 
+            } 
+            else if(pekerjaan == 'Asisten Manager'){
+                harsat = 10000000; 
+            } 
+            else if(pekerjaan == 'Staff'){
+                harsat = 5000000; 
+            }
+            else{
+                gapok = 0; 
+            } 
+            let tunjangan_jabatan = 0.15 * gapok;
+            let bpjs = 0.1 * gapok;
+            let tunjangan_keluarga = (status == "Menikah") ? 0.2 * gapok;
+            let total = tunjangan_jabatan + tunjangan_keluarga + gapok + bpjs;
+            //ternary
+            /*
+            if(pekerjaan == 'Manager') Total = 0.2 * gapok;
+            else total = 0;
+            */
+            document.write(
+            "<br/>Nama Pegawai: " + pegawai +
+            "<br/>Jabatan: " + jabatan +
+            "<br/>Status: " + status +
+            "<br/>Gaji: " + gapok + 
+            "<br/>Bpjs: " + bpjs +
+            "<br/>Tunjangan_keluarga: " + tunjangan_keluarga + 
+            "<br/>Tunjangan_jabatan: " + tunjangan_jabatan +
+            "<br/>Total: " + 
+            )
+        </script>
